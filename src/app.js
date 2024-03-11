@@ -14,4 +14,11 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))        // url sei a
 app.use(express.static("public"))                                   // files or folder ko store karne ke liye in public folder
 app.use(cookieParser())                                             // used for cookies
 
+// routes import 
+import userRouter from "./routes/user.routes.js"
+
+// routes declaration
+app.use("/api/v1/users", userRouter)   // when it hit users it calls the userRouter
+
+
 export { app }
