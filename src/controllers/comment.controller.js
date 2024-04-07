@@ -30,7 +30,7 @@ const getVideoComments = asyncHandler(async (req, res) => {
 
     return res
     .status(200)
-    .json(200, getComments, "getting Comments Successfully")
+    .json(new ApiResponse(200, getComments, "getting Comments Successfully"))
 })
 
 const addComment = asyncHandler(async (req, res) => {
